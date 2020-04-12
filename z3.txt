@@ -1,0 +1,156 @@
+1. Найти максимальное число из трех. Функция на вход принимает 3 значения. на выход одно самое большое. 
+max_of_3
+def max_of_3(a,b,c,):
+    if a>=b and a>c:
+        return ("max chislo=%i" %a)
+    elif a<b>=c:
+        return ("max chislo=%i" %b)
+    elif a<=c>b:
+        return ("max chislo=%i" %c)
+    else:
+        return("vse chisla ravny %i" %a)
+
+print (max_of_3(100,100,100))
+///////////
+def max_of_3(a,b,c,):
+    return max([a,b,c])
+print (max_of_3(1010,-5,100))
+/////////////
+
+#2. Найти среднее из трех чисел. Функция на вход принимает 3 значения. На выход одно - то что больше одного из трех, но меньше второго.
+
+def average_of_3(a,b,c):
+    l=[a,b,c]
+    l.remove(max([a,b,c]))
+    l.remove(min([a,b,c]))
+    return("srednee iz %s,%s,%s=%s" %(a,b,c,l[0]))
+
+print (average_of_3(40,134,23))
+
+print (average_of_3(20,300,600))
+//////////
+Найти наибольшую цифру числа. Функция на вход принимает число. На выход отдает наибольшую цифру этого числа.
+
+max_digit(821) => 8
+max_digit(14015621) => 6
+max_digit(19015621) => 9
+
+def max_digit(a):
+    a=str(a)
+    l=[]
+    l+=a
+    return ("максимальная цифра числа %s : %s" %(a,max(l)))
+
+print(max_digit(14015621))
+print(max_digit(19015621))z
+////////
+2sposob
+def max_digit(a):
+    l=[]
+    a=str(a)
+    for i in a:
+        l.append(int(i))
+    return ("максимальная цифра числа %s : %s" %(a,max(l)))
+
+print(max_digit(14015621))
+print(max_digit(19015621))
+///////
+3 sposob
+def max_digit(a):
+
+    i=0
+    a=str(a)
+    z = a[0]
+    while i < len(a)-1:
+        if int(z)<=int(a[i+1]):
+            z=a[i+1]
+        i+=1
+
+    return ("максимальная цифра числа %s : %s" %(a,z))
+
+print(max_digit(14015621))
+print(max_digit(19015621))
+///////
+4. Перевернуть число. Функция на вход принимает число, возвращает число, в котором цифры отображены в обратном порядке.
+
+reversed_number(87641) = > 14678
+def reversed_number(a):
+    l=[]
+    l+=str(a)
+    l.reverse()
+    return "".join(l)
+print(reversed_number(123456789))
+///////
+def reversed_number(a):
+    i=1
+    b=str(a)
+    t1=""
+    while i<=len(b):
+        t1+=b[-i]
+        i+=1
+    return t1
+print(reversed_number(1234))
+
+s[::-1]--еще способ перевернуть строку
+#reversed_number(87641) = > 14678
+def reversed_number(a):
+    return (str(a)[::-1])
+print(reversed_number(123456789))
+/////////
+#5. Найти количество двузначных чисел в списке.
+
+def double_digits_number(l):
+    count=0
+    for n in l:
+        if len(str(n))==2:
+            count+=1
+    return("%s двузначных чисел в %s "% (count,l))
+
+print (double_digits_number([1, 12, 55, 124, 235235]))
+print (double_digits_number([0, 23, 65, 8, 23]))
+print (double_digits_number([221, 3, 0, 89324, 1, 124]))
+///////////////
+class Product():
+    def __init__(self,title, price):
+        self.title = title
+        self.price = price
+pomidor=Product("Pomidor",10)
+ogurok=Product("Ogurok",40)
+
+class Store():
+    def __init__(self,title):
+        self.title = title
+        self.product ={"pomidor":0,"ogurok":1}  # ключом обЬект нельзя делать??
+        print("создали магазин %s"%self.title)    #format
+    def add_product(self,product, number_of_products=1):
+        if product== pomidor:
+            self.product["pomidor"]+=number_of_products
+            print("добавили в магазин %s помидоров" % number_of_products)
+        elif product== ogurok:
+            self.product["ogurok"] += number_of_products
+            print("добавили в магазин %s огурцов"%number_of_products)
+        else: print("в магазине у нас только помидоры и огурцы")
+
+    def showcase(self,product=None):
+        if product == pomidor:
+            print("В магазине %s имеется %s в количестве %s штук, по цене %s руб, общая стоимость %s"%(self.title,pomidor.title,self.product["pomidor"],pomidor.price,pomidor.price*self.product["pomidor"]))
+        elif product == ogurok:
+            print("В магазине %s имеется %s в количестве %s штук, по цене %s руб, общая стоимость %s" % (self.title, ogurok.title, self.product["ogurok"], ogurok.price, ogurok.price * self.product["ogurok"]))
+        elif product == None:
+            print("В магазине %s Количество товара %s: %s штук, по цене %s руб, общая стоимость %s" % (self.title, pomidor.title, self.product["pomidor"], pomidor.price, pomidor.price * self.product["pomidor"]))
+            print("В магазине %s Количество товара %s: %s штук, по цене %s руб, общая стоимость %s" % (self.title, ogurok.title, self.product["ogurok"], ogurok.price, ogurok.price * self.product["ogurok"]))
+        else: print("запрашиваемого товара в магазине нет")
+
+magaz1=Store("evroopt")
+magaz1.add_product(pomidor)
+magaz1.add_product(pomidor,10)
+magaz1.add_product(pomidor,1)
+magaz1.add_product(ogurok,15)
+#print(magaz1.product)
+#magaz1.showcase(ogurok)
+#magaz1.showcase(pomidor)
+magaz1.showcase(None)
+
+#print(magaz1.products)
+
+/////////////
