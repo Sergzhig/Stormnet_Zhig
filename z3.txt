@@ -1,4 +1,4 @@
-1. Найти максимальное число из трех. Функция на вход принимает 3 значения. на выход одно самое большое. 
+1. РќР°Р№С‚Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РёР· С‚СЂРµС…. Р¤СѓРЅРєС†РёСЏ РЅР° РІС…РѕРґ РїСЂРёРЅРёРјР°РµС‚ 3 Р·РЅР°С‡РµРЅРёСЏ. РЅР° РІС‹С…РѕРґ РѕРґРЅРѕ СЃР°РјРѕРµ Р±РѕР»СЊС€РѕРµ. 
 max_of_3
 def max_of_3(a,b,c,):
     if a>=b and a>c:
@@ -17,7 +17,7 @@ def max_of_3(a,b,c,):
 print (max_of_3(1010,-5,100))
 /////////////
 
-#2. Найти среднее из трех чисел. Функция на вход принимает 3 значения. На выход одно - то что больше одного из трех, но меньше второго.
+#2. РќР°Р№С‚Рё СЃСЂРµРґРЅРµРµ РёР· С‚СЂРµС… С‡РёСЃРµР». Р¤СѓРЅРєС†РёСЏ РЅР° РІС…РѕРґ РїСЂРёРЅРёРјР°РµС‚ 3 Р·РЅР°С‡РµРЅРёСЏ. РќР° РІС‹С…РѕРґ РѕРґРЅРѕ - С‚Рѕ С‡С‚Рѕ Р±РѕР»СЊС€Рµ РѕРґРЅРѕРіРѕ РёР· С‚СЂРµС…, РЅРѕ РјРµРЅСЊС€Рµ РІС‚РѕСЂРѕРіРѕ.
 
 def average_of_3(a,b,c):
     l=[a,b,c]
@@ -29,7 +29,7 @@ print (average_of_3(40,134,23))
 
 print (average_of_3(20,300,600))
 //////////
-Найти наибольшую цифру числа. Функция на вход принимает число. На выход отдает наибольшую цифру этого числа.
+РќР°Р№С‚Рё РЅР°РёР±РѕР»СЊС€СѓСЋ С†РёС„СЂСѓ С‡РёСЃР»Р°. Р¤СѓРЅРєС†РёСЏ РЅР° РІС…РѕРґ РїСЂРёРЅРёРјР°РµС‚ С‡РёСЃР»Рѕ. РќР° РІС‹С…РѕРґ РѕС‚РґР°РµС‚ РЅР°РёР±РѕР»СЊС€СѓСЋ С†РёС„СЂСѓ СЌС‚РѕРіРѕ С‡РёСЃР»Р°.
 
 max_digit(821) => 8
 max_digit(14015621) => 6
@@ -39,7 +39,7 @@ def max_digit(a):
     a=str(a)
     l=[]
     l+=a
-    return ("максимальная цифра числа %s : %s" %(a,max(l)))
+    return ("РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ С†РёС„СЂР° С‡РёСЃР»Р° %s : %s" %(a,max(l)))
 
 print(max_digit(14015621))
 print(max_digit(19015621))z
@@ -50,7 +50,7 @@ def max_digit(a):
     a=str(a)
     for i in a:
         l.append(int(i))
-    return ("максимальная цифра числа %s : %s" %(a,max(l)))
+    return ("РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ С†РёС„СЂР° С‡РёСЃР»Р° %s : %s" %(a,max(l)))
 
 print(max_digit(14015621))
 print(max_digit(19015621))
@@ -66,12 +66,12 @@ def max_digit(a):
             z=a[i+1]
         i+=1
 
-    return ("максимальная цифра числа %s : %s" %(a,z))
+    return ("РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ С†РёС„СЂР° С‡РёСЃР»Р° %s : %s" %(a,z))
 
 print(max_digit(14015621))
 print(max_digit(19015621))
 ///////
-4. Перевернуть число. Функция на вход принимает число, возвращает число, в котором цифры отображены в обратном порядке.
+4. РџРµСЂРµРІРµСЂРЅСѓС‚СЊ С‡РёСЃР»Рѕ. Р¤СѓРЅРєС†РёСЏ РЅР° РІС…РѕРґ РїСЂРёРЅРёРјР°РµС‚ С‡РёСЃР»Рѕ, РІРѕР·РІСЂР°С‰Р°РµС‚ С‡РёСЃР»Рѕ, РІ РєРѕС‚РѕСЂРѕРј С†РёС„СЂС‹ РѕС‚РѕР±СЂР°Р¶РµРЅС‹ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ.
 
 reversed_number(87641) = > 14678
 def reversed_number(a):
@@ -91,20 +91,20 @@ def reversed_number(a):
     return t1
 print(reversed_number(1234))
 
-s[::-1]--еще способ перевернуть строку
+s[::-1]--РµС‰Рµ СЃРїРѕСЃРѕР± РїРµСЂРµРІРµСЂРЅСѓС‚СЊ СЃС‚СЂРѕРєСѓ
 #reversed_number(87641) = > 14678
 def reversed_number(a):
     return (str(a)[::-1])
 print(reversed_number(123456789))
 /////////
-#5. Найти количество двузначных чисел в списке.
+#5. РќР°Р№С‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РґРІСѓР·РЅР°С‡РЅС‹С… С‡РёСЃРµР» РІ СЃРїРёСЃРєРµ.
 
 def double_digits_number(l):
     count=0
     for n in l:
         if len(str(n))==2:
             count+=1
-    return("%s двузначных чисел в %s "% (count,l))
+    return("%s РґРІСѓР·РЅР°С‡РЅС‹С… С‡РёСЃРµР» РІ %s "% (count,l))
 
 print (double_digits_number([1, 12, 55, 124, 235235]))
 print (double_digits_number([0, 23, 65, 8, 23]))
@@ -120,26 +120,26 @@ ogurok=Product("Ogurok",40)
 class Store():
     def __init__(self,title):
         self.title = title
-        self.product ={"pomidor":0,"ogurok":1}  # ключом обЬект нельзя делать??
-        print("создали магазин %s"%self.title)    #format
+        self.product ={"pomidor":0,"ogurok":1}  # РєР»СЋС‡РѕРј РѕР±Р¬РµРєС‚ РЅРµР»СЊР·СЏ РґРµР»Р°С‚СЊ??
+        print("СЃРѕР·РґР°Р»Рё РјР°РіР°Р·РёРЅ %s"%self.title)    #format
     def add_product(self,product, number_of_products=1):
         if product== pomidor:
             self.product["pomidor"]+=number_of_products
-            print("добавили в магазин %s помидоров" % number_of_products)
+            print("РґРѕР±Р°РІРёР»Рё РІ РјР°РіР°Р·РёРЅ %s РїРѕРјРёРґРѕСЂРѕРІ" % number_of_products)
         elif product== ogurok:
             self.product["ogurok"] += number_of_products
-            print("добавили в магазин %s огурцов"%number_of_products)
-        else: print("в магазине у нас только помидоры и огурцы")
+            print("РґРѕР±Р°РІРёР»Рё РІ РјР°РіР°Р·РёРЅ %s РѕРіСѓСЂС†РѕРІ"%number_of_products)
+        else: print("РІ РјР°РіР°Р·РёРЅРµ Сѓ РЅР°СЃ С‚РѕР»СЊРєРѕ РїРѕРјРёРґРѕСЂС‹ Рё РѕРіСѓСЂС†С‹")
 
     def showcase(self,product=None):
         if product == pomidor:
-            print("В магазине %s имеется %s в количестве %s штук, по цене %s руб, общая стоимость %s"%(self.title,pomidor.title,self.product["pomidor"],pomidor.price,pomidor.price*self.product["pomidor"]))
+            print("Р’ РјР°РіР°Р·РёРЅРµ %s РёРјРµРµС‚СЃСЏ %s РІ РєРѕР»РёС‡РµСЃС‚РІРµ %s С€С‚СѓРє, РїРѕ С†РµРЅРµ %s СЂСѓР±, РѕР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ %s"%(self.title,pomidor.title,self.product["pomidor"],pomidor.price,pomidor.price*self.product["pomidor"]))
         elif product == ogurok:
-            print("В магазине %s имеется %s в количестве %s штук, по цене %s руб, общая стоимость %s" % (self.title, ogurok.title, self.product["ogurok"], ogurok.price, ogurok.price * self.product["ogurok"]))
+            print("Р’ РјР°РіР°Р·РёРЅРµ %s РёРјРµРµС‚СЃСЏ %s РІ РєРѕР»РёС‡РµСЃС‚РІРµ %s С€С‚СѓРє, РїРѕ С†РµРЅРµ %s СЂСѓР±, РѕР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ %s" % (self.title, ogurok.title, self.product["ogurok"], ogurok.price, ogurok.price * self.product["ogurok"]))
         elif product == None:
-            print("В магазине %s Количество товара %s: %s штук, по цене %s руб, общая стоимость %s" % (self.title, pomidor.title, self.product["pomidor"], pomidor.price, pomidor.price * self.product["pomidor"]))
-            print("В магазине %s Количество товара %s: %s штук, по цене %s руб, общая стоимость %s" % (self.title, ogurok.title, self.product["ogurok"], ogurok.price, ogurok.price * self.product["ogurok"]))
-        else: print("запрашиваемого товара в магазине нет")
+            print("Р’ РјР°РіР°Р·РёРЅРµ %s РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР° %s: %s С€С‚СѓРє, РїРѕ С†РµРЅРµ %s СЂСѓР±, РѕР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ %s" % (self.title, pomidor.title, self.product["pomidor"], pomidor.price, pomidor.price * self.product["pomidor"]))
+            print("Р’ РјР°РіР°Р·РёРЅРµ %s РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР° %s: %s С€С‚СѓРє, РїРѕ С†РµРЅРµ %s СЂСѓР±, РѕР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ %s" % (self.title, ogurok.title, self.product["ogurok"], ogurok.price, ogurok.price * self.product["ogurok"]))
+        else: print("Р·Р°РїСЂР°С€РёРІР°РµРјРѕРіРѕ С‚РѕРІР°СЂР° РІ РјР°РіР°Р·РёРЅРµ РЅРµС‚")
 
 magaz1=Store("evroopt")
 magaz1.add_product(pomidor)
