@@ -90,7 +90,8 @@ class Manager:
                 Manager.store=Manager.create_store()
                 try:
                     product=Manager.create_product()
-                except ProductPriceException:
+                except ProductPriceException as err:
+                    print(err)
                     print('Внимание!Пересоздайте продукт, неправильная цена>1000')
                     product = Manager.create_product()
                 number=input(f'Введите количество {product.title} в магазине {Manager.store.title}:')
