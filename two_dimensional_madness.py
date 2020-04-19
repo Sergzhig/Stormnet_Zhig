@@ -42,7 +42,42 @@ TWO = [
     ["*", " ", " ", " ", "*"],
     ["*", "*", "*", "*", "*"],
 ]
-
+THREE = [
+    ["*", "*", "*", "*", " "],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", "*", "*", "*", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    ["*", "*", "*", "*", " "],
+]
+FOUR = [
+    ["*", " ", " ", " ", "*"],
+    ["*", " ", " ", " ", "*"],
+    ["*", " ", " ", " ", "*"],
+    ["*", " ", " ", " ", "*"],
+    ["*", " ", " ", " ", "*"],
+    ["*", "*", "*", "*", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+]
+FIVE = [
+    ["*", "*", "*", "*", "*"],
+    ["*", " ", " ", " ", " "],
+    ["*", " ", " ", " ", " "],
+    ["*", " ", " ", " ", " "],
+    ["*", " ", " ", " ", " "],
+    ["*", "*", "*", "*", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    [" ", " ", " ", " ", "*"],
+    ["*", "*", "*", "*", "*"],
+]
 
 class TwoDimensionalMadness:
 
@@ -57,6 +92,9 @@ class TwoDimensionalMadness:
             '0': ZERO,
             '1': ONE,
             '2': TWO,
+            '3': THREE,
+            '4': FOUR,
+            '5': FIVE,
         }
         self.color = color
 
@@ -132,12 +170,12 @@ class TwoDimensionalMadness:
 
         for j in range(iter_j):
             for i in range(iter_i):
-                if str_line[j][i] !=" " or self.plane[j][i] == self.mark:
+                if str_line[j][i] !=' ' or self.plane[j][i] == self.mark:
                     self.plane[j][i] = self.mark
         return self.plane
 
 
-plane_object = TwoDimensionalMadness(height=15, width=20, background=" ", mark="A", space=" ", color='blue')
+plane_object = TwoDimensionalMadness(height=15, width=30, background=" ", mark="А", space=" ", color='blue')
 
 plane_object.put_mark(height=5, width=10)
 plane_object.put_mark(height=5, width=8)
@@ -149,6 +187,6 @@ plane_object.put_mark(height=10, width=8)
 plane_object.put_mark(height=10, width=10)
 plane_object.put_mark(height=10, width=9)
 
-plane_object.string_to_plane(some_string='101')
+plane_object.string_to_plane(some_string='12345')
 
 plane_object.print_plane(reversed=False, reflect=False)
