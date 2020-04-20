@@ -67,16 +67,16 @@ FOUR = [
     [" ", " ", " ", " ", "*"],
 ]
 FIVE = [
-    ["*", "*", "*", "*", "*"],
-    ["*", " ", " ", " ", " "],
-    ["*", " ", " ", " ", " "],
-    ["*", " ", " ", " ", " "],
-    ["*", " ", " ", " ", " "],
-    ["*", "*", "*", "*", "*"],
+    [" ", "*", "*", "*", "*"],
+    [" ", "*", " ", " ", " "],
+    [" ", "*", " ", " ", " "],
+    [" ", "*", " ", " ", " "],
+    [" ", "*", " ", " ", " "],
+    [" ", "*", "*", "*", "*"],
     [" ", " ", " ", " ", "*"],
     [" ", " ", " ", " ", "*"],
     [" ", " ", " ", " ", "*"],
-    ["*", "*", "*", "*", "*"],
+    [" ", "*", "*", "*", "*"],
 ]
 
 class TwoDimensionalMadness:
@@ -104,27 +104,29 @@ class TwoDimensionalMadness:
         plane = [[self.background] * self.width for i in range(self.height)]
         return plane
 
-    def reverse_plane(self, plane=None, reflection=False):
+    def reverse_plane(self, plane=None,rev=False,reflection=False):
         # реверсирует двумерное поле, если поле не передано, то берет self.plane
 
         if plane is None:
             plane = self.plane
-        for line in plane:
-            i = 0
-            while i < len(line):
-                if line[i] == self.mark:
-                    line[i] = self.background
-                else:
-                    line[i] = self.mark
-                i += 1
-        reversed_plane = plane
+        if rev:
+            for line in plane:
+                i = 0
+                while i < len(line):
+                    if line[i] == self.mark:
+                        line[i] = self.background
+                    else:
+                        line[i] = self.mark
+                    i += 1
+            reversed_plane = plane
+
         if reflection:
             reversed_plane = plane[::-1]
         return reversed_plane
 
     def print_plane(self, reversed=False, reflect=False):
         if reversed or reflect:
-            self.print_something(self.reverse_plane(reflection=reflect))
+            self.print_something(self.reverse_plane(rev=reversed, reflection=reflect))
         else:
             self.print_something(self.plane)
 
@@ -175,18 +177,18 @@ class TwoDimensionalMadness:
         return self.plane
 
 
-plane_object = TwoDimensionalMadness(height=15, width=30, background=" ", mark="А", space=" ", color='blue')
+plane_object = TwoDimensionalMadness(height=15, width=40, background=" ", mark="%", space=" ", color='blue')
 
-plane_object.put_mark(height=5, width=10)
-plane_object.put_mark(height=5, width=8)
-plane_object.put_mark(height=8, width=12)
-plane_object.put_mark(height=8, width=6)
-plane_object.put_mark(height=9, width=7)
-plane_object.put_mark(height=9, width=11)
-plane_object.put_mark(height=10, width=8)
-plane_object.put_mark(height=10, width=10)
-plane_object.put_mark(height=10, width=9)
+# plane_object.put_mark(height=5, width=10)
+# plane_object.put_mark(height=5, width=8)
+# plane_object.put_mark(height=8, width=12)
+# plane_object.put_mark(height=8, width=6)
+# plane_object.put_mark(height=9, width=7)
+# plane_object.put_mark(height=9, width=11)
+# plane_object.put_mark(height=10, width=8)
+# plane_object.put_mark(height=10, width=10)
+# plane_object.put_mark(height=10, width=9)
 
-plane_object.string_to_plane(some_string='12345')
+plane_object.string_to_plane(some_string='12345555')
 
 plane_object.print_plane(reversed=False, reflect=False)
