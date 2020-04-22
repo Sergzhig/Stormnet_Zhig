@@ -109,16 +109,17 @@ class TwoDimensionalMadness:
 
         if plane is None:
             plane = self.plane
-        if rev:
-            for line in plane:
-                i = 0
-                while i < len(line):
-                    if line[i] == self.mark:
-                        line[i] = self.background
-                    else:
-                        line[i] = self.mark
-                    i += 1
-            reversed_plane = plane
+            if rev:
+                for line in plane:
+                    i = 0
+                    while i < len(line):
+                        if line[i] == self.mark:
+                             line[i] = self.background
+                        else:
+                            line[i] = self.mark
+                        i += 1
+        reversed_plane = plane
+
 
         if reflection:
             reversed_plane = plane[::-1]
@@ -192,3 +193,5 @@ plane_object = TwoDimensionalMadness(height=15, width=40, background=" ", mark="
 plane_object.string_to_plane(some_string='12345555')
 
 plane_object.print_plane(reversed=False, reflect=False)
+
+
